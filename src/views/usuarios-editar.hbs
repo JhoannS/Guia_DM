@@ -1,0 +1,130 @@
+<title>Editar Usuarios</title>
+<link rel="stylesheet" href="/css/citas.css">
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="fa-solid fa-strikethrough icon"></i>
+            <div class="logo_name">Dashboard</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/admin">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="links_name">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="/usuarios">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="links_name">Usuarios</span>
+                </a>
+                <span class="tooltip">Usuarios</span>
+            </li>
+
+            <li>
+                <a href="/citas">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="links_name">Citas</span>
+                </a>
+                <span class="tooltip">Citas</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="/img/Logo Deiybby.svg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Prem Shahi</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket" id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <!-- <div class="loader_bg">
+            <div class="leap-frog">
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+            </div>
+        </div> -->
+        <h1 class="text1">Editaras el usuario: {{usuarioA.nombre}} {{usuarioA.apellido}}</h1>
+
+        <button class="Btn" id="open">
+            <div class="sign">
+                <i class="fa-solid fa-pen-clip"></i>
+            </div>
+            <div class="text" id="open">Editar</div>
+        </button>
+
+        <div class="citas">
+
+           
+            <div id="modal_container" class="modal-container">
+                <div class="modal">
+                    <form class="form" action="/usuarios/editar/{{usuarioA._id}}?_method=PUT" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+                        <p class="title">Editar Usuario: {{usuarioA.nombre}}</p>
+                        
+                        <p class="message">Estas a punto de editar un Usuario, ten en cuenta el Usuario que vas a editar. <br> DEBES SELECCIONAR EL ESTADO</p>
+                        
+                        <div class="flex">
+                            <div class="select">
+                                <select name="estado" id="format">
+                                    
+                                    <option selected disabled>Estado</option>
+
+                                    
+                                    <option value="Activo">Activo</option>
+                                    <option value="Cancelado">Cancelado</option>
+                                    <option value="Castigado">Castigado</option>
+
+                                </select>
+                            </div>
+                        </div>
+                         <label>
+
+                        <span>4 ultimos digitos de documento</span>
+                        <input placeholder="Ej: X.XXX.XX0.753" type="number" class="input" name="documento" value="{{usuarioA.documento}}">
+                    </label>
+                    <label>
+                        <span>Nombre</span>
+                        <input placeholder="Ej: Sebastian" type="text" class="input" name="nombre" value="{{usuarioA.nombre}}">
+                    </label>
+                    <label>
+                        <span>Apellido</span>
+                        <input placeholder="Ej: Zamudio" type="text" class="input" name="apellido" value="{{usuarioA.apellido}}">
+                    </label>
+                    <label>
+                        <span>Ciudad</span>
+                        <input placeholder="Ej: Bogota dc" type="text" class="input" name="ciudad" value="{{usuarioA.ciudad}}">
+                    </label>
+
+                    <label>
+                        <span>Telefono</span>
+                        <input placeholder="Ej: 316 000 000" type="number" class="input" name="telefono" value="{{usuarioA.telefono}}">
+                    </label>
+
+
+
+                        <div class="botones-form">
+                            <span class="cancelar" id="close">Cancelar</span>
+                            <button class="crear" name="crear">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+
+    </section>
+
+    <script src="/js/admin.js"></script>
+    <script>
+     
+
+    </script>
+
+
+</body>

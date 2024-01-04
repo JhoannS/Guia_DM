@@ -1,0 +1,21 @@
+{{#if error}}
+<div class="notificacion">
+    <div class="notificacion_body">
+        {{error}}
+        <i class="fa-solid fa-circle-xmark" style="color: #df0707;"></i>
+    </div>
+    <div class="progreso_notificacion"></div>
+</div>
+{{/if}}
+
+
+{{#each errors}}
+<div class="notificacion">
+    <div class="notificacion_body">
+        {{text}}
+        <i class="fa-solid fa-circle-xmark" style="color: #df0707;"></i>
+    </div>
+    <div class="progreso_notificacion"></div>
+</div>
+{{/each}}
+

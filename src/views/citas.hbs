@@ -1,0 +1,198 @@
+<title>Gestor de Citas</title>
+<link rel="stylesheet" href="/css/citas.css">
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="fa-solid fa-strikethrough icon"></i>
+            <div class="logo_name">Dashboard</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/admin">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="links_name">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="/usuarios">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="links_name">Usuarios</span>
+                </a>
+                <span class="tooltip">Usuarios</span>
+            </li>
+
+            <li>
+                <a href="/citas">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="links_name">Citas</span>
+                </a>
+                <span class="tooltip">Citas</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="/img/Logo Deiybby.svg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Prem Shahi</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket" id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="loader_bg">
+            <div class="leap-frog">
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+            </div>
+        </div>
+        <h1 class="text1">Citas</h1>
+        <button class="Btn" id="open">
+            <div class="sign">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="text" id="open">Nueva</div>
+        </button>
+
+        <div class="citas">
+            {{#if citas}}
+            {{#each citas}}
+            <div class="citas">
+                <div class="card" id="card">
+                    <div class="container">
+                        <div class="cloud front">
+                            <span class="left-front"></span>
+                            <span class="right-front"></span>
+                        </div>
+                        <span class="sun sunshine"></span>
+                        <span class="sun"></span>
+                        <div class="cloud back">
+                            <span class="left-back"></span>
+                            <span class="right-back"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                        <span>{{paciente}}<br>{{ciudad}}</span>
+                        <span>{{fecha}}</span>
+                    </div>
+
+                    <div class="card-header">
+                        <div class="gestor">
+                            <div class="opciones">
+                                <span id="editar-b"><a href="/citas/editar/{{_id}}"><i
+                                            class="fa-solid fa-pen-clip"></i></a></span>
+                                <form action="/citas/eliminar/{{_id}}?_method=DELETE" method="post">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" id="eliminar-b"><i class="fa-solid fa-square-check"></i></button>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <span class="temp">{{hora}}</span>
+
+                    <div class="temp-scale">
+                        <span>{{tipo}}</span>
+                    </div>
+                </div>
+
+
+            </div>
+            {{/each}}
+            {{else}}
+            <p class="empty">No hay citas Agendadas</p>
+            {{/if}}
+
+            {{>msg}}
+        {{>errors}}
+
+
+            <div id="modal_container" class="modal-container">
+                <div class="modal">
+                    <form class="form" method="POST" action="/citas/crear_cita">
+
+                        <p class="title">Nueva Cita</p>
+
+                        <p class="message">Registra una nueva solicitud, recuerda que el usuario debe estar registrado
+                            previamente, si no lo esta da click <a href="/usuarios">AQUI</a></p>
+                        <div class="flex">
+                            <div class="select">
+                                <select name="paciente" id="format">
+
+                                    <option selected disabled>Paciente</option>
+                                    {{#if usuario}}
+                                    {{#each usuario}}
+                                    <option value="{{nombre}} {{apellido}}">{{nombre}} {{apellido}} - {{documento}}
+                                    </option>
+                                    {{/each}}
+                                    {{else}}
+                                    <option selected disabled>No hay usuarios registrados
+                                    </option>
+                                    {{/if}}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="select">
+                                <select name="tipo" id="format">
+                                    <option selected disabled>Tipo</option>
+                                    <option value="Meditacion">Meditacion</option>
+                                    <option value="Consulta">Consulta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label>
+                            <span>Ciudad y modalidad</span>
+                            <input placeholder="Ej: Bogota dc - virtual" type="text" class="input" name="ciudad">
+                        </label>
+
+                        <label>
+                            <span>Hora</span>
+                            <input placeholder="Ej: 2:00 pm" type="text" class="input" name="hora">
+                        </label>
+
+                        <label>
+                            <span>Fecha</span>
+                            <input placeholder="Ej: dic 28,2023" type="text" class="input" name="fecha">
+                        </label>
+
+
+
+                        <div class="botones-form">
+                            <span class="cancelar" id="close">Cancelar</span>
+                            <button class="crear" name="crear">Crear</button>
+                    </form>
+                </div>
+            </div>
+
+    </section>
+
+    <script src="/js/admin.js"></script>
+    <script>
+        const div = document.getElementById('card');
+        const palabra = div.querySelector('.gestor');
+
+        div.addEventListener('mouseenter', () => {
+            palabra.style.display = 'inline'; /* Cambiado a 'inline' para mostrar el texto correctamente */
+            div.style.background = '#092635';
+            div.style.color = 'red';
+        });
+
+        div.addEventListener('mouseleave', () => {
+            palabra.style.display = 'none';
+            div.style.background = 'white';
+        });
+
+    </script>
+
+
+</body>

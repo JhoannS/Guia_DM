@@ -1,0 +1,208 @@
+<title>Bienvenido a Guia espiritual</title>
+<link rel="stylesheet" href="/css/index.css">
+
+
+<body>
+    <div class="contenedor" id="inicio">
+        <div class="header">
+            <div class="logo">
+                <img src="/img/Logo Deibby.svg" alt="logop">
+                <div class="nombre-logo">
+                    <h1>Guia Espiritual</h1>
+                    <p>Deibby Marulanda</p>
+                </div>
+            </div>
+
+            <div class="hora">
+                <span>9:13 pm</span><br>
+                <span>Martes 3 de Diciembre</span><br>
+                <a href="./login" style="color: aliceblue;"><i class="fa-solid fa-right-to-bracket"></i></a>
+                <a href="./signup" style="color: aliceblue;"><i class="fa-solid fa-user-plus"></i></a>
+
+            </div>
+        </div>
+
+        <div class="presentacion">
+            <div class="img">
+                <img src="/img/foto tio.svg" alt="foto tio">
+            </div>
+            <div class="bienvenida">
+                <p>Bienvenido</p>
+                <h1>Guia Espiritual</h1>
+                <div class="lineaP">
+                    <div class="linea"></div>
+                </div>
+                <div class="texto">
+                    <span>Hola, soy deibby marulanda coach espiritual, realizo comunicaciones y conexiones con angeles y seres de luz, trabajo con la parte de la energia y la parte espiritual del ser humano.</span>
+                </div>
+
+
+                <div class="agendar">
+                    <div class="logo-a">
+                        <img src="/img/Logo Deibby.svg" alt="logo-a">
+                        <div class="nombre-logo-a">
+                            <h4>Guia Espiritual</h4>
+                            <p>Deibby Marulanda</p>
+                        </div>
+                    </div>
+                    <p>¡Reserva tu cita ahora!</p>
+                    <button class="cssbuttons-io-button">
+                        Agendar
+                        <div class="icon">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="contenido">
+
+        <h1 id="servicios">Servicios</h1>
+        <div class="lineaP">
+            <div class="linea"></div>
+        </div>
+        <div class="servicios">
+            <div class="info">
+                <img src="/img/consultorio.jpg" alt="servicios">
+
+                <p>En DM, ofrecemos guiar en la parte energetica y espiritual de cada ser humano, entendimiento emocional psicologico de cada persona, entendimiento de por que estamos en este plano terrenal, limpieza espiritual de todo tipo de tabajo energeticos. 
+meditaciones, regresiones, sanidad atravez del impocision de manos, citas a medicos ancentrales.
+veremos tambien una vista al pasado, presente y futuro de cada ser de luz.</p>
+            </div>
+        </div>
+
+        
+        <h1 id="opiniones">Opiniones</h1>
+        <div class="lineaP">
+            <div class="linea"></div>
+        </div>
+
+        
+        <div class="opiniones">
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <ul class="carousel">
+                    {{#if listaOpiniones}}
+        {{#each listaOpiniones}}
+                    <li class="card">
+                        <span class="fechas-o">{{createdAt}}</span>
+                        <br>
+                        <div class="img"><img src="/img/Logo Deibby.svg" alt="img" draggable="false"></div>
+                        <h2>{{nombre}}</h2>
+                        <span>{{mensaje}}</span>
+                    </li>
+{{/each}}
+                    {{else}}
+                    <p class="empty">No hay Opiniones registradas</p>
+                    {{/if}}
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+             
+
+            <button id="open">
+                <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <span>Deja tu opinion</span>
+            </button>
+
+        </div>
+
+        <footer>
+            <div class="content">
+                <div class="top">
+                    <div class="logo-details">
+                        <img src="/img/Logo Deibby.svg" alt="">
+                        <span class="logo_name">Guia Espiritual <br>Deibby Marulanda</span>
+                    </div>
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="link-boxes">
+                    <ul class="box">
+                        <li class="link_name">Navegacion</li>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#opiniones">Opiniones</a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Direccion</li>
+                        <li><a href="#">Carrera 20 #8 05 sur</a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Telefonos</li>
+                        <li><a href="#">+57 310 8998375</a></li>
+                    </ul>
+
+                    <ul class="box input-box">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.56370158336105!2d-74.09780439583916!3d4.5905726949199055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f991f1d4c7c83%3A0xaac4b7eeea5ab65f!2zQ3JhIDIwICM4LTA1LCBCb2dvdMOh!5e0!3m2!1ses-419!2sco!4v1703206135015!5m2!1ses-419!2sco"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-details">
+                <div class="bottom_text">
+                    <span class="copyright_text">Copyright © 2023 <a href="#">Jhoann Zamudio.</a>Todos los derechos
+                        reservados</span>
+                    <span class="policy_terms">
+                        <a href="#">Politica de privacidad</a>
+                        <a href="#">Terminos & condiciones</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+            {{>msg}}
+
+        <div id="modal_container" class="modal-container">
+            <div class="modal">
+                <form class="form" method="POST" action="/crear_opinion">
+
+                    <p class="title">Registrar Opinion</p>
+                    <p class="message">Registra una opinion relevante acerca de la visita de Deibby marulanda, revisa
+                        muy bien ya que no se podra CORREGIR</p>
+
+                    <label>
+                        <span>Nombre</span>
+                        <input placeholder="" type="text" class="input" name="nombre">
+                    </label>
+
+                    <label>
+                        <span>Mensaje</span>
+                        <input placeholder="" type="text" class="input" name="mensaje">
+                    </label>
+
+
+                    <div class="botones-form">
+                        <span class="cancelar" id="close">Cancelar</span>
+                        <button class="crear" name="crear">Crear</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
+
+    
+</body>

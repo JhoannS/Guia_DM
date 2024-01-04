@@ -1,0 +1,77 @@
+<title>Bievenido nuevamente Nury</title>
+<link rel="stylesheet" href="/css/admin.css">
+
+<body>
+    {{#if user}}
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="fa-solid fa-strikethrough icon"></i>
+            <div class="logo_name">Dashboard</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/usuarios">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="links_name">Usuarios</span>
+                </a>
+                <span class="tooltip">Usuarios</span>
+            </li>
+
+            <li>
+                <a href="/citas">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="links_name">Citas</span>
+                </a>
+                <span class="tooltip">Citas</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="Logo Deibby.svg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Prem Shahi</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket" id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <!-- <div class="loader_bg">
+            <div class="leap-frog">
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+            </div>
+        </div> -->
+        <h1 class="text1">¿Que haremos hoy?</h1>
+
+        <div class="tarjetas">
+            <div class="card">
+                <div class="content">
+                    <p class="heading">Gestionar Usuarios</p>
+                    <p class="para">
+                        Aqui podras observar todos tus usuarios, ademas que podras registrar clientes.
+                    </p>
+                    <button class="btn"><a href="/usuarios">Entrar</a></button>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <p class="heading">Gestionar Citas</p>
+                    <p class="para">
+                        Aqui podras actualizar, eliminar o crear una nueva cita.
+                    </p>
+                    <button class="btn"><a href="/citas">Entrar</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{else}}
+    <h1>debe iniciar sesion primero <a href="/login">Aqui</a></h1>
+    <script src="/js/admin.js"></script>
+        {{/if}}
+</body>

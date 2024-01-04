@@ -1,0 +1,158 @@
+<title>Lista de Usuarios</title>
+<link rel="stylesheet" href="/css/usuarios.css">
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="fa-solid fa-strikethrough icon"></i>
+            <div class="logo_name">Dashboard</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/admin">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="links_name">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="/usuarios">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="links_name">Usuarios</span>
+                </a>
+                <span class="tooltip">Usuarios</span>
+            </li>
+
+            <li>
+                <a href="/citas">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="links_name">Citas</span>
+                </a>
+                <span class="tooltip">Citas</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="Logo Deibby.svg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Prem Shahi</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket" id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <!-- <div class="loader_bg">
+            <div class="leap-frog">
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+            </div>
+        </div> -->
+
+
+        <div class="contenedor">
+            <div class="header-form">
+                <p>Lista de Pacientes</p>
+                <button id="open" class="cssbuttons-io-button">
+                    Registrar
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+
+            </div>
+            <div class="formulario-usuarios">
+
+                <tr class="body">
+                    {{#if listaUsuarios}}
+                    {{#each listaUsuarios}}
+                    <div class="card">
+                        <div class="card-border-top">
+
+                        </div>
+                        <p class="job"> {{documento}} - {{ciudad}}</p>
+                        <div class="img">
+                        </div>
+                        <span> {{nombre}} {{apellido}}</span>
+                        <p class="job"> {{telefono}}</p>
+                        <div class="estado"> <span>{{estado}}</span></div>
+                        <div class="gestor">
+                            <div class="opciones">
+                                <span id="editar-b"><a href="/usuarios/editar/{{_id}}"><i
+                                            class="fa-solid fa-pen-clip"></i></a></span>
+                                <form action="/usuarios/eliminar/{{_id}}?_method=DELETE" method="post">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" id="eliminar-b"><i class="fa-solid fa-trash"></i></button>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{else}}
+                    <p class="empty">No hay Usuarios registrados</p>
+                    {{/if}}
+
+                    {{!-- <td>
+
+                    </td> --}}
+
+                </tr>
+
+                </table>
+            </div>
+        </div>
+            {{>msg}}
+
+
+        <div id="modal_container" class="modal-container">
+            <div class="modal">
+                <form class="form" method="POST" action="/usuarios/crear_usuario">
+
+                    <p class="title">Nuevo Paciente</p>
+                    <p class="message">Registra un nuevo cliente, recuerda llenar todos los datos correctamente para que
+                        se registre exitosamente.</p>
+
+                    <label>
+                        <span>4 ultimos digitos de documento</span>
+                        <input placeholder="Ej: X.XXX.XX0.753" type="number" class="input" name="documento">
+                    </label>
+                    <label>
+                        <span>Nombre</span>
+                        <input placeholder="Ej: Sebastian" type="text" class="input" name="nombre">
+                    </label>
+                    <label>
+                        <span>Apellido</span>
+                        <input placeholder="Ej: Zamudio" type="text" class="input" name="apellido">
+                    </label>
+                    <label>
+                        <span>Ciudad</span>
+                        <input placeholder="Ej: Bogota dc" type="text" class="input" name="ciudad">
+                    </label>
+
+                    <label>
+                        <span>Telefono</span>
+                        <input placeholder="Ej: 316 000 000" type="number" class="input" name="telefono">
+                    </label>
+
+
+                    <div class="botones-form">
+                        <span class="cancelar" id="close">Cancelar</span>
+                        <button class="crear">Crear</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/admin.js"></script>
+
+</body>

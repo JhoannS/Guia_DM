@@ -1,0 +1,130 @@
+<title>Editar Citas</title>
+<link rel="stylesheet" href="/css/citas.css">
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="fa-solid fa-strikethrough icon"></i>
+            <div class="logo_name">Dashboard</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/admin">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="links_name">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="/usuarios">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="links_name">Usuarios</span>
+                </a>
+                <span class="tooltip">Usuarios</span>
+            </li>
+
+            <li>
+                <a href="/citas">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="links_name">Citas</span>
+                </a>
+                <span class="tooltip">Citas</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="/img/Logo Deiybby.svg" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Prem Shahi</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket" id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <!-- <div class="loader_bg">
+            <div class="leap-frog">
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+                <div class="leap-frog__dot"></div>
+            </div>
+        </div> -->
+        <h1 class="text1">Editaras la cita de: {{citaA.paciente}}</h1>
+
+        <button class="Btn" id="open">
+            <div class="sign">
+                <i class="fa-solid fa-pen-clip"></i>
+            </div>
+            <div class="text" id="open">Editar</div>
+        </button>
+
+        <div class="citas">
+
+           
+            <div id="modal_container" class="modal-container">
+                <div class="modal">
+                    <form class="form" action="/citas/editar/{{citaA._id}}?_method=PUT" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+                        <p class="title">Editar Cita</p>
+                        
+                        <p class="message">Estas a punto de editar una cita, ten en cuenta la cita que vas a editar. <br> DEBES SELECCIONAR NUEVAMENTE EL PACIENTE Y EL TIPO</p>
+                        
+                        <div class="flex">
+                            <div class="select">
+                                <select name="paciente" id="format">
+                                    
+                                    <option selected disabled>Paciente</option>
+
+                                    {{#each usuario}}
+                                    <option value="{{nombre}} {{apellido}}">{{nombre}} {{apellido}} - {{documento}}</option>
+                                    {{/each}}
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="select">
+                                <select name="tipo" id="format">
+                                    <option selected disabled>Tipo</option>
+                                    <option value="Meditacion">Meditacion</option>
+                                    <option value="Consulta">Consulta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label>
+                            <span>Ciudad</span>
+                            <input placeholder="Ej: Bogota dc" type="text" class="input" name="ciudad" value="{{citaA.ciudad}}">
+                        </label>
+
+                        <label>
+                            <span>Hora</span>
+                            <input placeholder="Ej: 2:00 pm" type="text" class="input" name="hora" value="{{citaA.hora}}">
+                        </label>
+
+                        <label>
+                            <span>Fecha</span>
+                            <input placeholder="" type="text" class="input" name="fecha" value="{{citaA.fecha}}"> 
+                        </label>
+
+
+
+                        <div class="botones-form">
+                            <span class="cancelar" id="close">Cancelar</span>
+                            <button class="crear" name="crear">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+
+    </section>
+
+    <script src="/js/admin.js"></script>
+    <script>
+     
+
+    </script>
+
+
+</body>

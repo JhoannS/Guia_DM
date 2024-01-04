@@ -1,0 +1,84 @@
+<title>Inicia Sesion</title>
+<link rel="stylesheet" href="/css/login.css">
+
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="/login" method="post" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="img/Logo Deibby.svg" alt="easyclass" />
+                <div class="logo-eslogan">
+                  <h4>Guia Espiritual</h4>
+                  <p>Deibby Marulanda</p>
+                </div>
+              </div>
+              <div class="heading">
+                <h2>Bievenido de vuelta</h2>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-container">
+                  <input class="input" name="usuario" type="text">
+                  <label class="label" for="input">Digita tu Usuario</label>
+                  <div class="topline"></div>
+                  <div class="underline"></div>
+                  </div>
+                  <br>
+                  <div class="input-container">
+                    <input class="input" name="password" type="text">
+                    <label class="label" for="input">Digita tu Contraseña</label>
+                    <div class="topline"></div>
+                    <div class="underline"></div>
+                    </div>
+                    <br>
+                <input type="submit" value="Entrar" class="sign-btn"/>
+                <button><a href="/signup" class="toggle">Crear Cuenta</a></button>
+                
+
+                <p class="text">
+                  ¿Olvidaste los datos de tu cuenta? Conecta con el 
+                  <a href="#">Servidor</a>
+                </p>
+                <p class="text"><a href="/">Volver al inicio</a></p>
+              </div>
+            </form>
+
+           
+
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="/img/image1.png" class="image img-1 show" alt="" />
+              <img src="/img/image2.png" class="image img-2" alt="" />
+              <img src="/img/image3.png" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h3>Sera tu Guia espiritual...</h3>
+                  <h2>Agenda tu cita desde el boton </h2>
+                  <h2>Animate, Att: Deibby Marulanda</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+        {{>msg}}
+         {{>errors}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Javascript file -->
+
+    <script src="/js/login.js"></script>
+  </body>
