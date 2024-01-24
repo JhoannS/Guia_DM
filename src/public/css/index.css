@@ -40,7 +40,7 @@
 
 .logo img {
     width: 100px;
-    margin: 0 20px 0 40px ;
+    margin: 0 20px 0 40px;
 }
 
 .logo p {
@@ -86,7 +86,7 @@
     font-weight: bold;
 }
 
-.texto{
+.texto {
     margin-top: 50px;
     font-size: 25px;
 }
@@ -314,12 +314,14 @@
     justify-content: center;
     align-items: center;
 }
-.empty{
+
+.empty {
     color: var(--blanco);
     text-align: center;
     width: 300%;
     font-size: 25px;
 }
+
 .carousel .card {
     scroll-snap-align: start;
     height: 342px;
@@ -343,7 +345,7 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .carousel .card h2 {
@@ -585,20 +587,20 @@ footer .content .link-boxes .box {
     position: fixed;
     z-index: 99999;
     pointer-events: none;
-    opacity: 0;  
+    opacity: 0;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     transition: opacity 0.3s ease;
-  }
-  
-  .show {
+}
+
+.show {
     pointer-events: auto;
     opacity: 1;
-  }
-  
-  .modal {
+}
+
+.modal {
     background-color: #fff;
     width: 600px;
     max-width: 100%;
@@ -606,9 +608,9 @@ footer .content .link-boxes .box {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
-  }
-  
-  .form {
+}
+
+.form {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -616,9 +618,9 @@ footer .content .link-boxes .box {
     background-color: #fff;
     border-radius: 20px;
     position: relative;
-  }
-  
-  .title {
+}
+
+.title {
     font-size: 28px;
     color: #83A2FF;
     font-weight: 600;
@@ -627,9 +629,10 @@ footer .content .link-boxes .box {
     display: flex;
     align-items: center;
     padding-left: 30px;
-  }
-  
-  .title::before,.title::after {
+}
+
+.title::before,
+.title::after {
     position: absolute;
     content: "";
     height: 16px;
@@ -637,60 +640,63 @@ footer .content .link-boxes .box {
     border-radius: 50%;
     left: 0px;
     background-color: var(--azul);
-  }
-  
-  .title::before {
+}
+
+.title::before {
     width: 18px;
     height: 18px;
     background-color: var(--azul);
-  }
-  
-  .title::after {
+}
+
+.title::after {
     width: 18px;
     height: 18px;
     animation: pulse 1s linear infinite;
-  }
-  
-  .message, .signin {
+}
+
+.message,
+.signin {
     color: rgba(88, 87, 87, 0.822);
     font-size: 14px;
     margin: 0;
     text-align: left;
-  }
-  
-  .signin {
+}
+
+.signin {
     text-align: center;
-  }
-  
-  .signin a {
+}
+
+.signin a {
     color: royalblue;
-  }
-  
-  .signin a:hover {
+}
+
+.signin a:hover {
     text-decoration: underline royalblue;
-  }
-  
-  .flex {
+}
+
+.flex {
     display: flex;
     width: 100%;
     gap: 6px;
-  }
-  .flex label{
+}
+
+.flex label {
     width: 100%;
-  }
-  .form label {
+}
+
+.form label {
     position: relative;
-  }
-  
-  .form label .input {
+}
+
+.form label .input {
     width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 10px;
-  }
-  
-  .form label span {
+}
+
+.form label span {
     position: absolute;
     left: 10px;
     top: 30px;
@@ -698,13 +704,14 @@ footer .content .link-boxes .box {
     font-size: 0.9em;
     cursor: text;
     transition: 0.3s ease;
-  }
-  
-  
-  .botones-form{
+}
+
+
+.botones-form {
     display: flex;
-  }
-  .crear {
+}
+
+.crear {
     border: none;
     outline: none;
     background-color: var(--azul);
@@ -717,14 +724,14 @@ footer .content .link-boxes .box {
     margin: 5px;
     transition: all .5s ease;
     cursor: pointer;
-  }
-  
-  .crear:hover {
-    background-color:var(--azul_claro);
+}
+
+.crear:hover {
+    background-color: var(--azul_claro);
     color: var(--blanco);
-  }
-  
-  .cancelar {
+}
+
+.cancelar {
     border: 1px solid red;
     outline: none;
     background-color: transparent;
@@ -737,24 +744,24 @@ footer .content .link-boxes .box {
     margin: 5px;
     transition: all .5s ease;
     cursor: pointer;
-  }
-  
-  .cancelar:hover {
+}
+
+.cancelar:hover {
     background-color: red;
     color: white;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     from {
-      transform: scale(0.9);
-      opacity: 1;
+        transform: scale(0.9);
+        opacity: 1;
     }
-  
+
     to {
-      transform: scale(1.8);
-      opacity: 0;
+        transform: scale(1.8);
+        opacity: 0;
     }
-  }
+}
 
 
 .input-box input[type="button"]:hover {
@@ -797,9 +804,14 @@ footer .bottom-details .bottom_text {
         flex-wrap: wrap;
     }
 
+
     footer .content .link-boxes .input-box {
         width: 40%;
         margin-top: 10px;
+    }
+
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
     }
 }
 
@@ -833,7 +845,131 @@ footer .bottom-details .bottom_text {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+
 @media screen and (max-width: 420px) {
+
+    .header {
+        display: contents;
+        margin: 0;
+
+    }
+
+    .logo {
+        padding: 30px 20px;
+    }
+
+    .hora {
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    .nombre-logo h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .presentacion {
+        display: block;
+    }
+
+    .presentacion .img {
+        margin-top: 100px;
+    }
+
+    .presentacion .img {
+        margin: 100px 0px;
+        border-radius: 50%;
+        background-color: var(--azul_re_oscuro);
+    }
+
+    .presentacion img {
+        width: 250px;
+    }
+
+    .bienvenida {
+        margin-top: -80px;
+    }
+
+    .bienvenida p {
+        font-size: 35px;
+    }
+
+    .bienvenida h1 {
+        font-size: 25px;
+    }
+
+    .bienvenida .texto {
+        margin-top: 15px;
+        font-size: 17px;
+    }
+
+    .presentacion .agendar {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .presentacion .agendar .nombre-logo-a span {
+        font-size: 15px;
+        text-align: center;
+
+    }
+
+    .presentacion .agendar p {
+        font-size: 18px;
+        margin: 8px;
+    }
+
+    .btn-a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #servicios {
+        margin-top: 70px;
+    }
+
+    .servicios .info {
+        display: block;
+        margin: 30px 20px;
+        height: 100%;
+    }
+
+    .servicios .info img {
+        border-radius: 5px 25% 5px 5px;
+        width: 100%;
+    }
+
+    .servicios .info p {
+        padding: 10px;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    #opiniones {
+        margin-top: auto;
+    }
+
+    .boton-i {
+        display: flex;
+        justify-content: center;
+    }
+
+    .empty {
+        color: var(--blanco);
+        text-align: center;
+        width: 50%;
+        font-size: 15px;
+        margin-left: 60px;
+    }
+
+
     footer::before {
         top: 145px;
     }
@@ -853,30 +989,6 @@ footer .bottom-details .bottom_text {
     footer .content .link-boxes .input-box {
         width: 100%;
     }
-}
-@media screen and (max-width: 400px){
-    
-    .header{
-        background-color: red;
-        margin-top: 0;
-    }
-    .logo{
-        margin-top: 0;
-    }
 
-    .nombre-logo h1{
-        font-size: 20px;
-    }
 
-}
-@media screen and (max-width: 900px) {
-    .wrapper .carousel {
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .wrapper .carousel {
-        grid-auto-columns: 100%;
-    }
 }

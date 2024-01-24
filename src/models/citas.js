@@ -6,7 +6,7 @@ const citaSchema = new Schema(
     paciente: {
       type: String,
       require: true,
-      trim: true,
+      trim: true, 
     },
     tipo: {
       type: String,
