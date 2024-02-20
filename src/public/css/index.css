@@ -40,7 +40,11 @@
 
 .logo img {
     width: 100px;
+<<<<<<< HEAD
     margin: 0 20px 0 40px;
+=======
+    margin: 0 20px 0 40px ;
+>>>>>>> ae30881 (first commit)
 }
 
 .logo p {
@@ -86,11 +90,14 @@
     font-weight: bold;
 }
 
+<<<<<<< HEAD
 .texto {
     margin-top: 50px;
     font-size: 25px;
 }
 
+=======
+>>>>>>> ae30881 (first commit)
 .lineaP {
     width: 100%;
     display: flex;
@@ -314,14 +321,21 @@
     justify-content: center;
     align-items: center;
 }
+<<<<<<< HEAD
 
 .empty {
+=======
+.empty{
+>>>>>>> ae30881 (first commit)
     color: var(--blanco);
     text-align: center;
     width: 300%;
     font-size: 25px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae30881 (first commit)
 .carousel .card {
     scroll-snap-align: start;
     height: 342px;
@@ -345,7 +359,11 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
+<<<<<<< HEAD
     object-fit: cover;
+=======
+    object-fit: cover; 
+>>>>>>> ae30881 (first commit)
 }
 
 .carousel .card h2 {
@@ -587,12 +605,17 @@ footer .content .link-boxes .box {
     position: fixed;
     z-index: 99999;
     pointer-events: none;
+<<<<<<< HEAD
     opacity: 0;
+=======
+    opacity: 0;  
+>>>>>>> ae30881 (first commit)
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     transition: opacity 0.3s ease;
+<<<<<<< HEAD
 }
 
 .show {
@@ -601,6 +624,16 @@ footer .content .link-boxes .box {
 }
 
 .modal {
+=======
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .modal {
+>>>>>>> ae30881 (first commit)
     background-color: #fff;
     width: 600px;
     max-width: 100%;
@@ -608,9 +641,15 @@ footer .content .link-boxes .box {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
+<<<<<<< HEAD
 }
 
 .form {
+=======
+  }
+  
+  .form {
+>>>>>>> ae30881 (first commit)
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -618,9 +657,15 @@ footer .content .link-boxes .box {
     background-color: #fff;
     border-radius: 20px;
     position: relative;
+<<<<<<< HEAD
 }
 
 .title {
+=======
+  }
+  
+  .title {
+>>>>>>> ae30881 (first commit)
     font-size: 28px;
     color: #83A2FF;
     font-weight: 600;
@@ -629,10 +674,16 @@ footer .content .link-boxes .box {
     display: flex;
     align-items: center;
     padding-left: 30px;
+<<<<<<< HEAD
 }
 
 .title::before,
 .title::after {
+=======
+  }
+  
+  .title::before,.title::after {
+>>>>>>> ae30881 (first commit)
     position: absolute;
     content: "";
     height: 16px;
@@ -640,6 +691,7 @@ footer .content .link-boxes .box {
     border-radius: 50%;
     left: 0px;
     background-color: var(--azul);
+<<<<<<< HEAD
 }
 
 .title::before {
@@ -656,10 +708,28 @@ footer .content .link-boxes .box {
 
 .message,
 .signin {
+=======
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: var(--azul);
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message, .signin {
+>>>>>>> ae30881 (first commit)
     color: rgba(88, 87, 87, 0.822);
     font-size: 14px;
     margin: 0;
     text-align: left;
+<<<<<<< HEAD
 }
 
 .signin {
@@ -689,14 +759,49 @@ footer .content .link-boxes .box {
 }
 
 .form label .input {
+=======
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  .flex label{
+    width: 100%;
+  }
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+>>>>>>> ae30881 (first commit)
     width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 10px;
+<<<<<<< HEAD
 }
 
 .form label span {
+=======
+  }
+  
+  .form label span {
+>>>>>>> ae30881 (first commit)
     position: absolute;
     left: 10px;
     top: 30px;
@@ -704,6 +809,7 @@ footer .content .link-boxes .box {
     font-size: 0.9em;
     cursor: text;
     transition: 0.3s ease;
+<<<<<<< HEAD
 }
 
 
@@ -712,6 +818,15 @@ footer .content .link-boxes .box {
 }
 
 .crear {
+=======
+  }
+  
+  
+  .botones-form{
+    display: flex;
+  }
+  .crear {
+>>>>>>> ae30881 (first commit)
     border: none;
     outline: none;
     background-color: var(--azul);
@@ -724,6 +839,7 @@ footer .content .link-boxes .box {
     margin: 5px;
     transition: all .5s ease;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 .crear:hover {
@@ -732,6 +848,16 @@ footer .content .link-boxes .box {
 }
 
 .cancelar {
+=======
+  }
+  
+  .crear:hover {
+    background-color:var(--azul_claro);
+    color: var(--blanco);
+  }
+  
+  .cancelar {
+>>>>>>> ae30881 (first commit)
     border: 1px solid red;
     outline: none;
     background-color: transparent;
@@ -744,6 +870,7 @@ footer .content .link-boxes .box {
     margin: 5px;
     transition: all .5s ease;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 .cancelar:hover {
@@ -762,6 +889,26 @@ footer .content .link-boxes .box {
         opacity: 0;
     }
 }
+=======
+  }
+  
+  .cancelar:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+>>>>>>> ae30881 (first commit)
 
 
 .input-box input[type="button"]:hover {
@@ -804,15 +951,21 @@ footer .bottom-details .bottom_text {
         flex-wrap: wrap;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae30881 (first commit)
     footer .content .link-boxes .input-box {
         width: 40%;
         margin-top: 10px;
     }
+<<<<<<< HEAD
 
     .wrapper .carousel {
         grid-auto-columns: calc((100% / 2) - 9px);
     }
+=======
+>>>>>>> ae30881 (first commit)
 }
 
 @media (max-width: 700px) {
@@ -845,6 +998,7 @@ footer .bottom-details .bottom_text {
     }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 600px) {
     .wrapper .carousel {
         grid-auto-columns: 100%;
@@ -970,6 +1124,9 @@ footer .bottom-details .bottom_text {
     }
 
 
+=======
+@media screen and (max-width: 420px) {
+>>>>>>> ae30881 (first commit)
     footer::before {
         top: 145px;
     }
@@ -989,6 +1146,35 @@ footer .bottom-details .bottom_text {
     footer .content .link-boxes .input-box {
         width: 100%;
     }
+<<<<<<< HEAD
 
 
+=======
+}
+@media screen and (max-width: 400px){
+    
+    .header{
+        background-color: red;
+        margin-top: 0;
+    }
+    .logo{
+        margin-top: 0;
+    }
+
+    .nombre-logo h1{
+        font-size: 20px;
+    }
+
+}
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+>>>>>>> ae30881 (first commit)
 }
