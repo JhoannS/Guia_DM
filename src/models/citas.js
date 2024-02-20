@@ -6,11 +6,7 @@ const citaSchema = new Schema(
     paciente: {
       type: String,
       require: true,
-<<<<<<< HEAD
-      trim: true, 
-=======
       trim: true,
->>>>>>> ae30881 (first commit)
     },
     tipo: {
       type: String,
