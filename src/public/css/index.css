@@ -91,16 +91,15 @@
     font-size: 25px;
 }
 
-<<<<<<< HEAD
 .texto {
-    margin-top: 50px;
+    margin-top: 0px;
     font-size: 25px;
 }
 
-=======
->>>>>>> ae30881 (first commit)
+
 .lineaP {
     width: 100%;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -807,11 +806,6 @@ footer .bottom-details .bottom_text {
         flex-wrap: wrap;
     }
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> ae30881 (first commit)
     footer .content .link-boxes .input-box {
         width: 40%;
         margin-top: 10px;
@@ -848,7 +842,7 @@ footer .bottom-details .bottom_text {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
     footer::before {
         top: 145px;
     }
@@ -930,11 +924,21 @@ footer .bottom-details .bottom_text {
         width: 100%;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px){
     
     .header{
-        background-color: red;
         margin-top: 0;
+        flex-direction: column;
+    }
+    .header .logo{
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+    .header .hora{
+        text-align: center;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
     }
 
     .boton-i {
@@ -942,6 +946,55 @@ footer .bottom-details .bottom_text {
         justify-content: center;
     }
 
+    .presentacion{
+        padding: 0 20px;
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .presentacion .img{
+        width: 80%;
+    }
+
+    .presentacion .agendar{
+        display: flex;
+        flex-direction: column;
+    }
+    .agendar .logo-a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .agendar .logo-a img{
+        width: 100px;
+        display: flex;
+    }
+    .nombre-logo-a h4{
+        font-size: 25px;
+    }
+    .agendar p{
+        font-size: 50px;
+    }
+    .servicios{
+        width: 100%;
+        min-height: 50%;
+    }
+
+    .servicios .info p{
+        padding: 10px 0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .wrapper .carousel {    
+        grid-auto-columns: calc((100% / 1) - 12px);
+    }
+
+    .opiniones .card{
+        height: 100%;
+        padding: 10px 0;
+    }
     .empty {
         color: var(--blanco);
         text-align: center;
@@ -949,7 +1002,6 @@ footer .bottom-details .bottom_text {
         font-size: 15px;
         margin-left: 60px;
     }
-
 
     footer::before {
         top: 145px;
@@ -969,5 +1021,9 @@ footer .bottom-details .bottom_text {
 
     footer .content .link-boxes .input-box {
         width: 100%;
+    }
+
+    footer .bottom-details .bottom_text{
+        gap: 20px;
     }
 }
