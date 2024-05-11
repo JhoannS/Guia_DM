@@ -15,14 +15,14 @@
 
             <div class="hora">
                 <div class="grupacion-hora">
-                     <span>9:13 pm</span><br>
-                <span>Martes 3 de Diciembre</span>
+                    <span id="hora">cargando</span><br>
+                    <span id="fecha">zona horaria</span>
                 </div>
-               <div class="log">
-                <a href="./login" style="color: aliceblue;"><i class="fa-solid fa-right-to-bracket"></i></a>
-                <a href="./signup" style="color: aliceblue;"><i class="fa-solid fa-user-plus"></i></a>
-               </div>
-                
+                <div class="log">
+                    <a href="./login" style="color: aliceblue;"><i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="./signup" style="color: aliceblue;"><i class="fa-solid fa-user-plus"></i></a>
+                </div>
+
 
             </div>
         </div>
@@ -38,7 +38,9 @@
                     <div class="linea"></div>
                 </div>
                 <div class="texto">
-                    <span>¡Hola! Soy Deyby Marulanda, un guía espiritual y clarividente apasionado por ayudar a las personas a encontrar su camino hacia la sanación y el crecimiento personal. Con más de 6 años de experiencia, he trabajado con individuos de diversas culturas y creencias.</span>
+                    <span>¡Hola! Soy Deyby Marulanda, un guía espiritual y clarividente apasionado por ayudar a las
+                        personas a encontrar su camino hacia la sanación y el crecimiento personal. Con más de 6 años de
+                        experiencia, he trabajado con individuos de diversas culturas y creencias.</span>
                 </div>
 
 
@@ -78,25 +80,29 @@
             <div class="info">
                 <img src="/img/consultorio.jpg" alt="servicios">
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eius eveniet enim nisi, tempore impedit
-                    alias facilis sit natus exercitationem molestiae? Dolor, id voluptatibus neque fugit mollitia eius.
-                    Natus, minus.</p>
+                <p>Ofrezco orientación en temas como relaciones, espiritualidad, propósito de vida y desarrollo
+                    personal.
+                    Realizo meditación y otras prácticas espirituales para ayudar a mis clientes a conectarse con su
+                    interior y encontrar respuestas. <br>
+                    Enfoque Holístico: Mi enfoque es holístico, considerando el cuerpo, la mente y el espíritu en cada
+                    consulta. A través de mi habilidad para conectar con el mundo espiritual, recibo orientación para
+                    guiar a quienes buscan respuestas y claridad.</p>
             </div>
         </div>
 
-        
+
         <h1 id="opiniones">Opiniones</h1>
         <div class="lineaP">
             <div class="linea"></div>
         </div>
 
-        
+
         <div class="opiniones">
             <div class="wrapper">
                 <i id="left" class="fa-solid fa-angle-left"></i>
                 <ul class="carousel">
                     {{#if listaOpiniones}}
-        {{#each listaOpiniones}}
+                    {{#each listaOpiniones}}
                     <li class="card">
                         <span class="fechas-o">{{createdAt}}</span>
                         <br>
@@ -104,14 +110,14 @@
                         <h2>{{nombre}}</h2>
                         <span>{{mensaje}}</span>
                     </li>
-{{/each}}
+                    {{/each}}
                     {{else}}
                     <p class="empty">No hay Opiniones registradas</p>
                     {{/if}}
                 </ul>
                 <i id="right" class="fa-solid fa-angle-right"></i>
             </div>
-             
+
 
             <button id="open">
                 <div class="svg-wrapper-1">
@@ -179,7 +185,7 @@
                 </div>
             </div>
         </footer>
-            {{>msg}}
+        {{>msg}}
 
         <div id="modal_container" class="modal-container">
             <div class="modal">
@@ -209,5 +215,5 @@
     </div>
     <script src="/js/index.js"></script>
 
-    
+
 </body>

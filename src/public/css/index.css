@@ -333,7 +333,7 @@
     list-style: none;
     background: var(--azul);
     cursor: pointer;
-    padding-bottom: 15px;
+    padding: 40px;
     flex-direction: column;
     border-radius: 8px;
     text-align: center;

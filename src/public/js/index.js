@@ -93,3 +93,45 @@ autoPlay();
         carousel.addEventListener("scroll", infiniteScroll);
         wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
         wrapper.addEventListener("mouseleave", autoPlay);
+
+
+       // Función para obtener la fecha y hora actual en formato 12 horas con día, mes y año
+       function obtenerFechaHoraActual() {
+        const fechaHora = new Date();
+        const diaSemana = obtenerDiaSemana(fechaHora.getDay()); // Obtiene el nombre del día de la semana
+        const dia = fechaHora.getDate();
+        const mes = fechaHora.toLocaleString('es-ES', { month: 'long' }); // Obtén el nombre del mes
+        const anio = fechaHora.getFullYear();
+        let hora = fechaHora.getHours();
+        const minutos = fechaHora.getMinutes();
+        const segundos = fechaHora.getSeconds();
+        let amPm = "AM"; // Por defecto, asumimos que es AM
+
+        // Ajusta la hora al formato de 12 horas y determina si es AM o PM
+        if (hora >= 12) {
+            amPm = "PM";
+            if (hora > 12) {
+                hora -= 12;
+            }
+        }
+
+        // Formatea la fecha y hora
+        const fechaFormateada = `${diaSemana} ${dia} de ${mes} de ${anio}`;
+        const horaFormateada = `${hora}:${minutos}:${segundos} ${amPm}`;
+
+        // Muestra la fecha y hora en el elemento con id "fecha-hora"
+        document.getElementById("fecha").textContent = `${fechaFormateada}`;
+        document.getElementById("hora").textContent = `${horaFormateada}`;
+    }
+
+    // Función para obtener el nombre del día de la semana
+    function obtenerDiaSemana(numeroDia) {
+        const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        return diasSemana[numeroDia];
+    }
+
+    // Llama a la función al cargar la página
+    obtenerFechaHoraActual();
+
+    // Actualiza los segundos cada segundo
+    setInterval(obtenerFechaHoraActual, 1000);
